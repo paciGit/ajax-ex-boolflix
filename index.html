@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boolfix</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <input class="film-search" type="text" placeholder="Inserisci il nome di un Film" value="">
+  <button class='search'>Search</button>
+  <ul class="films">
+  </ul>
+
+  <script id="film-template" type="text/x-handlebars-template">
+    <li>{{title}} - {{original_title}} - {{original_language}} - {{vote_average}}</li>
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
