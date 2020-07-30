@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Boolfix</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
 </head>
 <body>
 
@@ -13,7 +14,17 @@
   </ul>
 
   <script id="film-template" type="text/x-handlebars-template">
-    <li>{{title}} - {{original_title}} - {{original_language}} - {{vote_average}}</li>
+    <li> {{title}} </li>
+    <ul>
+      <li> {{original_title}} </li>
+      <li> {{original_language}} <img class='flag_space' src="img/{{flag}}.png" alt="Nazionalità">
+      </li>
+      <li class="voto">{{vote_average}} {{{stars}}}</li>
+    </ul>
+  </script>
+
+  <script id="stars" type="text/x-handlebars-template">
+    <i class="star fas fa-star {{numero}}"></i>
   </script>
 
 

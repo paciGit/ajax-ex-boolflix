@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.color {
+  color: yellow;
+}
+
+
+img {
+  height: 20px;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+  line-height: 20px;
+  padding: 7px;
+}
+
+input {
+  margin: 10px 10px;
+}
