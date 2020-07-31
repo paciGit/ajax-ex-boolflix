@@ -17,6 +17,9 @@ img {
 li {
   list-style: none;
   line-height: 20px;
+}
+
+ul {
   padding: 7px;
 }
 
