@@ -1,12 +1,18 @@
 function init(){
   $('.search').click(function(){
-
       var titolo = $(".film-search").val();
-
       reset();
-
       searchFilms(titolo);
       searchSeries(titolo);
+  });
+
+  $('.film-search').keypress(function(event) {
+    if(event.which == 13) {
+      var titolo = $(".film-search").val();
+      reset();
+      searchFilms(titolo);
+      searchSeries(titolo);
+    }
   });
 }
 
@@ -68,7 +74,7 @@ function searchSeries(string){ // Chiamata Api per Serie tv
 
 function printStelle(votiFilm){ // Aggiunta votazione stelle
   var somma= '';
-  for (var i = 0; i <= 5; i++) {
+  for (var i = 0; i < 5; i++) {
     if ( i < votiFilm) {
       var risultato = '<i class="fas fa-star color"></i>';
     } else {
@@ -120,6 +126,7 @@ function print(type, results) {
       original_title: originalTitle,
       original_language: thisResult.original_language,
       vote_average: thisResult.vote_average,
+      poster_path : "https://image.tmdb.org/t/p/w185" + thisResult.poster_path,
       flag: flag,
       vote_average: voti,
       stars: printStelle(voti)

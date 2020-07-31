@@ -8,28 +8,43 @@
 </head>
 <body>
 
-  <input class="film-search" type="text" placeholder="Inserisci il nome di un Film" value="">
+  <!-- <input class="film-search" type="text" placeholder="Inserisci il nome di un Film" value="">
   <button class='search'>Search</button>
   <h2>FILM</h2>
   <ul class="films">
-  </ul>
+  </ul> -->
 
-  <h2>SERIE TV</h2>
-  <ul class="serie">
-  </ul>
+  <div class="flex">
+    <h1>Boolflix</h1>
+    <div class="flex">
+      <input class="film-search" type="text" placeholder="Inserisci il nome di un film" value="">
+      <button class='search'>Search</button>
+    </div>
+  </div>
+
+
+  <ul class="films film_style"></ul>
+  <ul class="serie film_style"></ul>
+
+
+  <ul class="films film_style"></ul>
+  <ul class="serie film_style"></ul>
+
 
   <script id="film-template" type="text/x-handlebars-template">
-    <li>{{title}}
-    <ul>
+    <div class="style">
+    <div class="copertina">  <img src={{poster_path}} alt=""/></div>
+    <ul class="padding">
+      <li>{{title}}
       <li>{{type}}</li>
       <li>Titolo Originale: {{original_title}}</li>
       <li>Lingua originale: {{original_language}}
-          <img class='' src="img/{{flag}}.png" alt=""/>
+        <img class='' src="img/{{flag}}.png" alt=""/>
       </li>
       <li class="voto">{{vote_average}} {{{stars}}}</li>
+      </li>
     </ul>
-    </li>
-  </script>
+    </div>
 
   <script id="stars" type="text/x-handlebars-template">
     <i class="star fas fa-star {{numero}}"></i>
